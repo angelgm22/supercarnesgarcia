@@ -146,12 +146,12 @@ export function renderHome() {
 
       </div>
     </section>
-     <!-- Footer -->
+     <!-- Footer - - >
     <footer class="mt-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           
-          <!-- Marca -->
+          <! -  Marca - -> 
           <div>
             <h3 class="text-xl font-extrabold text-gray-900 dark:text-white">
               Super Carnes García
@@ -161,7 +161,7 @@ export function renderHome() {
             </p>
           </div>
 
-          <!-- Ubicación -->
+          <!  - Ubicación - - >
           <div>
             <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">📍 Ubicación</h4>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -171,7 +171,7 @@ export function renderHome() {
             </p>
           </div>
 
-          <!-- Horario + contacto -->
+          <! - - Horario + contacto - ->
           <div>
             <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">🕒 Horario</h4>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
@@ -202,7 +202,7 @@ export function renderHome() {
           </div>
         </div>
       </div>
-    </footer>
+    </footer -->
 
   `
 }

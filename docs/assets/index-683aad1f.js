@@ -324,12 +324,12 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
 
       </div>
     </section>
-     <!-- Footer -->
+     <!-- Footer - - >
     <footer class="mt-16 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
       <div class="max-w-6xl mx-auto px-6 sm:px-8 md:px-12 py-12">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
           
-          <!-- Marca -->
+          <! -  Marca - -> 
           <div>
             <h3 class="text-xl font-extrabold text-gray-900 dark:text-white">
               Super Carnes García
@@ -339,7 +339,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
             </p>
           </div>
 
-          <!-- Ubicación -->
+          <!  - Ubicación - - >
           <div>
             <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">📍 Ubicación</h4>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -349,7 +349,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
             </p>
           </div>
 
-          <!-- Horario + contacto -->
+          <! - - Horario + contacto - ->
           <div>
             <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-3">🕒 Horario</h4>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
@@ -380,7 +380,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
           </div>
         </div>
       </div>
-    </footer>
+    </footer -->
 
   `}function at(s){const e=typeof s.discount<"u"&&s.discount>0,t=s.activo===!1,r=s.precio||0,o=e&&r>0?r-r*(s.discount||0)/100:r;return`
     <div class="product-card group relative bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden border border-gray-100 dark:border-gray-700 ${t?"opacity-60 order-last grayscale":""}" data-product-id="${s.id}" data-activo="${s.activo!==!1}">
@@ -505,7 +505,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
   `,s.innerHTML=o;const n=s.querySelectorAll("button");n.forEach((a,i)=>{a.addEventListener("click",()=>{if(a.disabled)return;let l=e;i===0?l=e-1:i===n.length-1?l=e+1:l=parseInt(a.textContent||"1"),window.scrollTo({top:0,behavior:"smooth"}),r(l)})})}const ce=Object.freeze(Object.defineProperty({__proto__:null,setupPagination:Tt},Symbol.toStringTag,{value:"Module"}));function Ha(){const s=document.querySelectorAll(".category-filter");s.forEach(e=>{e.addEventListener("click",async()=>{const t=e.getAttribute("data-category");s.forEach(i=>{i.classList.remove("bg-primary-600","text-white"),i.classList.add("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300")}),e.classList.remove("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300"),e.classList.add("bg-primary-600","text-white");const r=window.userRole||"user";let o;t&&t!=="Todos"?o=T.from("productos").select(`
             *,
             producto_subcategorias!inner(subcategoria)
-          `).eq("categoria","carnes").eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").eq("categoria","carnes").order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("meatsGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>{window.setupDragAndDrop()},100))})})}function kt(){return setTimeout(()=>{q(()=>import("./searchProducts-4b4e204d.js"),[]).then(s=>{s.setupSearch({inputId:"searchMeats",resultsId:"searchMeatsResults",gridId:"meatsGrid",categoria:"carnes"})}),Ha()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("meatsGrid","meatsPagination","carnes",!1,!1)},100)}),`
+          `).eq("categoria","carnes").eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").eq("categoria","carnes").order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("meatsGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>{window.setupDragAndDrop()},100))})})}function kt(){return setTimeout(()=>{q(()=>import("./searchProducts-c083015f.js"),[]).then(s=>{s.setupSearch({inputId:"searchMeats",resultsId:"searchMeatsResults",gridId:"meatsGrid",categoria:"carnes"})}),Ha()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("meatsGrid","meatsPagination","carnes",!1,!1)},100)}),`
     <div class="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
 
       <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
@@ -577,7 +577,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
   `}function Va(){const s=document.querySelectorAll(".category-filter");s.forEach(e=>{e.addEventListener("click",async()=>{const t=e.getAttribute("data-category");s.forEach(i=>{i.classList.remove("bg-primary-600","text-white"),i.classList.add("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300")}),e.classList.remove("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300"),e.classList.add("bg-primary-600","text-white");const r=window.userRole||"user";let o;t&&t!=="Todos"?o=T.from("productos").select(`
             *,
             producto_subcategorias!inner(subcategoria)
-          `).neq("categoria","carnes").eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").neq("categoria","carnes").order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("productsGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>{window.setupDragAndDrop()},100))})})}function _t(){return setTimeout(()=>{q(()=>import("./searchProducts-4b4e204d.js"),[]).then(s=>{s.setupSearch({inputId:"searchProducts",resultsId:"searchProductsResults",gridId:"productsGrid",categoria:"productos",excludeCarnes:!0})}),Va()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("productsGrid","productsPagination","productos",!0,!1)},100)}),`
+          `).neq("categoria","carnes").eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").neq("categoria","carnes").order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("productsGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>{window.setupDragAndDrop()},100))})})}function _t(){return setTimeout(()=>{q(()=>import("./searchProducts-c083015f.js"),[]).then(s=>{s.setupSearch({inputId:"searchProducts",resultsId:"searchProductsResults",gridId:"productsGrid",categoria:"productos",excludeCarnes:!0})}),Va()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("productsGrid","productsPagination","productos",!0,!1)},100)}),`
     <div class="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
       <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
         <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">Nuestros Productos</h1>
@@ -644,7 +644,7 @@ ${x}`}class z extends Error{constructor({message:e,code:t,cause:r,name:o}){var n
   `}function Wa(){const s=document.querySelectorAll(".category-filter");s.forEach(e=>{e.addEventListener("click",async()=>{const t=e.getAttribute("data-category");s.forEach(i=>{i.classList.remove("bg-primary-600","text-white"),i.classList.add("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300")}),e.classList.remove("bg-gray-200","dark:bg-gray-700","text-gray-700","dark:text-gray-300"),e.classList.add("bg-primary-600","text-white");const r=window.userRole||"user";let o;t&&t!=="Todos"?o=T.from("productos").select(`
             *,
             producto_subcategorias!inner(subcategoria)
-          `).gt("descuento",0).eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").gt("descuento",0).order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("offersGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>window.setupDragAndDrop(),100))})})}function Et(){return setTimeout(()=>{q(()=>import("./searchProducts-4b4e204d.js"),[]).then(s=>{s.setupSearch({inputId:"searchOffers",resultsId:"searchOffersResults",gridId:"offersGrid",onlyOffers:!0})}),Wa()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("offersGrid","offersPagination",void 0,!1,!0)},100)}),`
+          `).gt("descuento",0).eq("producto_subcategorias.subcategoria",t).order("orden",{ascending:!0}):o=T.from("productos").select("*").gt("descuento",0).order("orden",{ascending:!0}),r!=="admin"&&(o=o.eq("activo",!0));const{data:n}=await o,a=document.getElementById("offersGrid");a&&n&&(a.innerHTML=n.map(i=>at({id:i.id,name:i.nombre,description:i.descripcion||"",image:i.imagen_url||"/images/placeholder.jpg",category:i.categoria,discount:i.descuento,activo:i.activo,precio:i.precio,showPrice:!0})).join(""),typeof window.updateAdminButtons=="function"&&window.updateAdminButtons(),typeof window.setupDragAndDrop=="function"&&setTimeout(()=>window.setupDragAndDrop(),100))})})}function Et(){return setTimeout(()=>{q(()=>import("./searchProducts-c083015f.js"),[]).then(s=>{s.setupSearch({inputId:"searchOffers",resultsId:"searchOffersResults",gridId:"offersGrid",onlyOffers:!0})}),Wa()},0),requestAnimationFrame(()=>{setTimeout(()=>{Tt("offersGrid","offersPagination",void 0,!1,!0)},100)}),`
     <div class="container mx-auto px-3 sm:px-4 lg:px-6 py-4 sm:py-6 lg:py-8">
       
       <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
