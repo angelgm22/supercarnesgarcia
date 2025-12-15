@@ -1,5 +1,5 @@
 export function renderContact() {
-  return `
+    return `
     <section class="mb-12">
       <div class="max-w-3xl mx-auto">
         <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4 text-center">
@@ -51,6 +51,10 @@ export function renderContact() {
           <p class="mt-1">🕒 7:00 a 22:00 horas (Todos los días)</p>
         </div>
       </div>
+      <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-3">
+  Al enviar el formulario se abrirá tu aplicación de correo para completar el envío.
+</p>
+
     </section>
   `
 }

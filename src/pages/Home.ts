@@ -193,7 +193,7 @@ export function renderHome() {
 
         <div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-sm text-gray-500 dark:text-gray-500">
-            © ${new Date().getFullYear()} Super Carnes García. Todos los derechos reservados.
+            © 2025-2026 Super Carnes García. Todos los derechos reservados.
           </p>
           <div class="flex items-center gap-4 text-sm">
             <a href="#" data-page="meats" class="nav-link text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">Cortes</a>

@@ -14,6 +14,8 @@ import { EditProductModal } from './components/ui/EditProductModal'
 import { setupAuth } from './components/auth/setupAuth'
 import { setupAddProductModal } from './components/ui/setupAddProductModal'
 import { setupEditProductModal } from './components/ui/setupEditProductModal'
+import { Footer } from './components/layout/Footer'
+import { renderContact } from './pages/Contact'
 
 // Inicializar el modo oscuro
 const isDarkMode = localStorage.getItem('darkMode') === 'true'
@@ -764,6 +766,8 @@ function renderPage(page: string) {
       return renderProducts()
     case 'offers':
       return renderOffers()
+          case 'contact':
+      return renderContact()
     default:
       return renderHome()
   }
@@ -778,6 +782,7 @@ function renderApp() {
       <main id="pageContent">
         ${renderPage(currentPage)}
       </main>
+            ${Footer()}
     </div>
   `
 
@@ -831,6 +836,8 @@ function attachUIForContent() {
       adminElements.forEach(el => {
         (el as HTMLElement).style.display = 'flex'
       })
+
+
       
       // Nota: setupDragAndDrop() se llama autom�ticamente desde pagination.ts
       // despu�s de renderizar productos, as� que no es necesario llamarlo aqu�
@@ -840,6 +847,38 @@ function attachUIForContent() {
         (el as HTMLElement).style.display = 'none'
       })
     }
+if (currentPage === 'contact') {
+  const form = document.getElementById('contactForm') as HTMLFormElement | null
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault()
+
+      const formData = new FormData(form)
+      const name = formData.get('name')?.toString() || ''
+      const email = formData.get('email')?.toString() || ''
+      const message = formData.get('message')?.toString() || ''
+
+      if (!name || !email || !message) {
+        alert('Por favor completa todos los campos.')
+        return
+      }
+
+      const to = 'supercarnesgarcia@outlook.com'
+      const subject = encodeURIComponent(`Contacto Web - ${name}`)
+      const body = encodeURIComponent(
+        `Nombre: ${name}\n` +
+        `Correo: ${email}\n\n` +
+        `Mensaje:\n${message}`
+      )
+
+      // Abrir cliente de correo del usuario
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`
+    }, { once: true })
+  }
+}
+
+
   } catch (e) {
     console.error('? Error en attachUIForContent:', e)
   }
